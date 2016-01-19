@@ -1,6 +1,6 @@
 var files = [
 	"http://wernerrau.github.io/oef1.html",
-	"http://wernerrau.github.io.oef2.html"
+	"http://wernerrau.github.io/oef2.html"
 ]
 var numFiles = files.length;
 var chosenFileNr = Math.floor(Math.random()*numFiles);
