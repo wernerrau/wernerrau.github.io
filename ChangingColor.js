@@ -1,8 +1,8 @@
 function ChangingColor() {
 	// initialisaties
-	this.rood = 0.0;
-	this.groen = 0.0;
-	this.blauw = 0.0;
+	this.rood = 255.0;
+	this.groen = 255.0;
+	this.blauw = 255.0;
 	this.stijgingRood = Math.random();
 	this.stijgingGroen = Math.random();
 	this.stijgingBlauw = Math.random();

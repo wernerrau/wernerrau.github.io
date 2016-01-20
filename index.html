@@ -1,7 +1,30 @@
 <html>
 <head>
 	<title>graphics</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 </head>
 <body>
-<iframe src="oef1.html" style="border:0; height:500; margin:auto;"></iframe>
+<iframe src="oef1.html" style="border:0;" width=500 height=500 id="iframe"></iframe>
+<script type="text/javascript">
+var files = [
+	"oef1.html",
+	"oef2.html"
+];
+var delay = 1000*20; // 1 minute
+function newLocation() {
+	var numFiles = files.length;
+	var chosenFileNr = Math.floor(Math.random()*numFiles);
+	var chosenFile = files[chosenFileNr];
+	$('iframe').attr('src',chosenFile);
+	console.log(iframe.src);
+	setTimeout(fadeOut,delay);
+};	
+function fadeOut() {
+	$('iframe').fadeOut(2000,fadeIn);
+};
+function fadeIn() {
+	$('iframe').fadeIn(2000,newLocation);
+};
+</script>
 </body>

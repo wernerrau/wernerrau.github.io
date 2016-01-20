@@ -16,7 +16,7 @@ setTimeout(fadeOut,delay);
 $('body').css('display', 'none');
 jQuery(function($) {
 
-  $(document.body).fadeIn(5000);
+  $(document.body).fadeIn(2000);
 
 });
 
