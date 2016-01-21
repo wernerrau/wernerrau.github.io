@@ -5,14 +5,14 @@
 </head>
 
 <body>
-  <canvas height="500" id="myCanvas" width="500"></canvas>
+  <canvas height="480" id="myCanvas" width="480" style="border:0;position: absolute;top: 50%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%)"></canvas>
   <script type="text/javascript" src="ChangingColor.js"></script>
   <script type="text/javascript" src="randomFileChooser.js"></script>
   <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
       
-    canvas.style.width ='100%';
+    /*canvas.style.width ='100%';
     canvas.style.height='100%';
     console.log(canvas.offsetWidth + " " + canvas.offsetHeight)
     
@@ -21,6 +21,7 @@
     // centreren
     canvas.style.margin = "auto";
     canvas.style.display = "block";
+    */
     
     var hoogte = canvas.height;
     var breedte = canvas.width;
