@@ -28,22 +28,21 @@
     var straal = Math.min(hoogte,breedte) * 0.7 / 2;
       
     var changingColor = new ChangingColor();
-    setTimeout(tekencirkel, 30, 0, changingColor);
+    var graden = 0;
+    requestAnimationFrame(tekencirkel);
     
-    function tekencirkel(graden,changingColor) {
+    function tekencirkel() {
       var puntX = hoogte/2 + straal * Math.sin(graden * 2 * Math.PI / 360);
       var puntY = breedte/2 + straal * Math.cos(graden * 2 * Math.PI / 360);
-      //ctx.clearRect(0, 0, breedte, hoogte);
       ctx.beginPath();
       ctx.arc(puntX,puntY,straal,0,2*Math.PI);
       changingColor.nextColor();
       var kleur = changingColor.rbgColor();
-      // console.log(kleur);
       ctx.fillStyle = kleur;
       ctx.fill();
-      graden+=1;
+      graden+=0.5;
       graden%=360;
-      setTimeout(tekencirkel, 30, graden,changingColor);
+      requestAnimationFrame(tekencirkel);
     }
       
   </script>
